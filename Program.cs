@@ -41,6 +41,7 @@ namespace TaskTopic8ForSDO
                 DoubleClick += (sender, e) => ShowLabel(label3);
                 MouseEnter += (sender, e) => _mouseOnForm = true;
                 MouseLeave += (sender, e) => _mouseOnForm = false;
+                //maybe
                 Button rickButton = CreateButton(new Size(60, 30), new Point(100, 500), Color.ForestGreen, "НАЖМИ МЕНЯ");
                 rickButton.Click += LinkButton_Click;
                 Button rickMegaButton = CreateButton(new Size(100, 60), new Point(350, 400), Color.LightGoldenrodYellow, "НЕ НАЖИМАЙ МЕНЯ");
@@ -53,7 +54,11 @@ namespace TaskTopic8ForSDO
                 if (_mouseOnForm) label.Visible = true;
                 //if (_mouseOnForm) label3.Visible = true;
             }
-
+            private void ShowLabel3(Label label3)
+            {
+                if (_mouseOnForm) label3.Visible = true;
+            }
+            //что-то там
             private void SetCommonParametrs(Control element, Size size, Point position, Color color, string title)
             {
                 element.Size = size;
